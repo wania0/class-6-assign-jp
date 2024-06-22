@@ -79,3 +79,57 @@ print("Charlie Math Score is:" , students [2]["scores"][0])
 print("Diana's avg score is:" , sum(students[3]["scores"])/len(students[3]["subjects"]))
 
 # 5. display John's all subject name and score with format: Student: [Name], Score: [Subject], Score: [Score] :
+
+student = {"John": 
+    {
+        "Subjects": ["Math", "Science", "English"],
+        "Scores": [50, 60, 60],
+        "Class": 11
+    }
+}
+list_len = len(student["John"]["Subjects"])
+
+for i in range(list_len):
+    name = "John"
+    subject = student["John"]["Subjects"][i]
+    score = student["John"]["Scores"][i]
+    print("Student:",name ,",", "Subject:" ,subject ,",", "Score:" ,score)
+    
+# 6. display which class obtained the higher marks :
+
+class_10_score = students[0]["scores"] + students[1]["scores"]
+class_11_score = students[2]["scores"] + students[3]["scores"]
+
+total_class_10 = sum(class_10_score)
+total_class_11 = sum(class_11_score)
+
+if total_class_10 > total_class_11:
+    print("Class 10 obtained the higher marks")
+else:
+    print("Class 11 obtained the higher marks")
+
+# 7. display the student name that obtain high marks in subject Math in class 10:
+
+alice_math_score = students[0]["scores"][0]
+bob_math_score = students[1]["scores"][0]
+
+if alice_math_score > bob_math_score :
+    print("The student that obtain high marks in Math in class 10 is : ", students[0]["name"])
+else:
+    print("The student that obtain high marks in Math in class 10 is : ", students[1]["name"])
+
+# 8. Add new Student and its subject, score and class in same dict i.e students :
+
+another_dict = {
+        "name": "Sara",
+        "subjects": ["Math", "Science", "English"],
+        "scores": [56, 78, 60] ,
+        "Class": 12
+    }
+students.append(another_dict)
+
+for item in students:
+    print(item)
+
+
+    
